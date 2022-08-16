@@ -1,0 +1,126 @@
+\subsection{Transferencia de materia}
+Se entiende por transferencia de materia a la tendencia de los
+componentes de una mezcla a desplazarse desde una región de concentración
+elevada a otra baja concentración. (~\cite{rod:2017})
+
+\subsection{Difusión}
+La difusión está caracterizada por el flujo
+de difusión $J$ de un componente, esto es, por la
+cantidad de materia que pasa en la unidad
+de tiempo a través de una superficie dada en la dirección
+normal a la superficie.
+La densidad de flujo de difusión $j$
+se puede definir como la cantidad de sustancia que
+pasa en la unidad de tiempo a través de la unidad de área $S$
+de la superficie dada en dirección normal a esta superficie.
+asi se tiene
+
+\begin{equation}
+    \label{eq:densidad:flujo}
+    j = \frac{dJ}{dS}
+\end{equation}
+
+por lo que tenemos que
+\begin{equation}
+    J = \int_S jDs
+\end{equation}
+
+si $j$ es constante entonces $J$ será
+\begin{equation}
+    J = jS
+\end{equation}
+
+\subsection{Fundamentemos de la difusión Molecular}
+\begin{enumerate}
+    \item Difusión es el mecanismo por e cual se produce el movimiento,
+    debido a un estimulo físico, de un componente a través de una 
+    mezcla.
+
+    \item La principal causa de la difusión es la existencia de un gradiente de 
+    concentración del componente que difunde. El gradiente de concentración provoca
+    el movimiento del componente de una dirección tal que tiene a igualar las concentraciones y reducir el gradiente.
+\end{enumerate}
+
+\subsection{Difusión Molecular}
+\begin{enumerate}
+    \item Se produce por el movimiento de las moléculas individuales, debido a su energía térmica.
+    \item El número de colisiones entre partículas es mayor en la zona de alta concentración, por lo que se da un flujo hacia la de menor concentración.
+\end{enumerate}
+
+\subsection{sistema para el estudio de la difusión molecular}
+En el sistema a considerar es la película gaseosa comprendida entre la superficie del líquido y la boca
+del tubo. En película gaseosa, muy cerca a la superficie líquida, se puede tomar la concentración de la especie, 
+A como la de equilibrio como el líquido, es decir, 
+que es la relación entre la presión de vapor de A
+a la temperatura del sistema y la presión total, suponiendo
+que $A$ y $B$ forman una mezcla gaseosa ideal,
+dentro dle recipiente el soluto $A$ difunde a través de $B$ estancado.
+
+\subsection{Ley de Fick}
+La densidad de flujo de difusión es un vector. Considerando que
+el valor de una de sus componentes es positivo cuando ésta esté dirigida
+hacia el sentido positivo del eje, y negativo en caso contrario.
+
+Como la sustancia se traslada de los lugares de mayor concentración a los
+de menor concentración, el signo de la componente del flujo en una dirección
+será el contrario del que da la derivada de la concentración en esa
+dirección $(\partial c/ \partial n)$. Si la concentración 
+aumenta de izquierda a derecha, el flujo va hacia la izquierda y viceversa.
+Además, si la concentración de la solución es uniforme $\partial c / \partial n = 0$,
+no habrá flujo de difusión. Considerando todo esto, para
+un sistema estacionario macroscópico de dos componentes, homogéneo en lo que
+respecta la temperatura y presión, la densidad
+de flujo de difusión de uno de los componentes, debido a difusión molecular, 
+vide dada por la \textit{Ley de Fick}~\cite{agus:2011}
+
+\begin{equation}
+    j_i = -D \frac{\partial c_i}{\partial n}
+\end{equation}
+
+o utilizando la gradiente
+
+\begin{equation}
+    \vec \jmath = -D \vec \nabla c_i
+\end{equation}
+
+
+\begin{equation}
+    J_A = D_{AB} \frac{-dC_A}{dz}
+\end{equation}
+
+donde $c_i$ es la concentración local de la sustancia, puede
+medirse en masa por unidad de volumen, moles por unidad de volumen, etc.
+
+\subsection{Difusión molecular en Estado estacionario}
+
+De la ley de Fick se deduce la siguiente ecuación
+
+\begin{equation}
+    N_A = (N_A + N_B) \frac{C_A}{C_T} - D_{AB} \frac{dC_A}{dz}
+\end{equation}
+
+El primer sumando es lo que se mueve de $A$ debido al flujo global
+del sistema.
+El segundo sumando es la densidad de flujo que resulta
+de la difusión.
+
+
+\begin{itemize}
+    \item $D_{AB}$: difusividad del compuesto $A$ en $B$
+    \item $dC_A/dz$: Gradiente de concentración del compuesto $A$ en
+    la dirección de $z$.
+    \item $N_A$ es la densidad de flujo del compuesto $A$ con respecto a los ejes fijos.
+    \item $N_B$: densidad de flujo dle compuesto $B$ con respecto a ejes fijos.
+    \item $C_A$: Concentración molar del compuesto $A$
+    \item $C_T$: Concentración molar total
+\end{itemize}
+
+\subsection{Difusividad}
+\begin{itemize}
+    \item Propiedad de transporte en función de la temperatura, presión
+    y la naturaleza de los componentes
+    \item Dimensione: $L^2/T$
+    \item Se carece de datos de difusividad para 
+    la mayor parte de las mezclas que tienen interés en ingeniería.
+    Es preciso estimarlas a partir de correlaciones.
+\end{itemize}

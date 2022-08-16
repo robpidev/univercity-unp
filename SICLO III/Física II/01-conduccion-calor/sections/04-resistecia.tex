@@ -1,0 +1,159 @@
+\subsection{Resistencia Térmica}
+como se dedujo en~\ref{subsub:coduction} la Conducción
+estaba dada por $R = L/k$, pero esto
+se hizo para un elemento discreto (i.e.\ una sola capa
+de material homogéneo y caras planoparalelas separas por
+un espesor $L$).
+
+Sin embargo esto no sirve si el elemento 
+no es homogéneo, pero si su heterogeneidad se distribuye
+uniformemente, en un laboratorio Se
+puede obtener un coeficiente de conductividad
+util $C$ como la media ponderada de los 
+coeficientes de cada material, asi se puede
+definir la Resistencia térmica $R$ como
+
+\begin{equation}
+    \label{eq:resistencia-het}
+    R = \frac{1}{C}
+\end{equation}
+
+Si un elemento está formado por varias
+capas con sus respectivas resistencia térmicas
+$R_1 + R_2 + \cdots + R_n$,
+entonces la resistencia total $R_T$ se puede
+deducir que es
+
+\begin{equation}
+    \label{eq:resistencia-total}
+    R_t = R_1 + R_2 + \cdots + R_n
+\end{equation}
+
+\subsubsection{Resistencia térmica superficial}
+Al pasar el calor de un fluido a un elemento sólido (en general, del aire ambiente a un elemento constructivo) se produce una resistencia a este paso, que varía con la velocidad del fluido (velocidad del aire), rugosidad de la superficie, etc.
+Y que se llama resistencia superficial. Tiene la misma ecuación dimensional que las resistencias de los elementos constructivos.
+
+\subsubsection{Transmitancia térmica}
+Es la cantidad de energía que atraviesa por 
+unidad de tiempo, una superficie
+de elemento conductivo de caras planas y paralelas
+cuando entre dichas caras hay un gradiente térmico.
+Es el inverso a la resistencia térmica
+
+\begin{equation}
+    \label{eq:transmitancia}
+    U = \frac{1}{R}
+\end{equation}
+
+\subsubsection{Resistencia térmica total}
+Cuando el elemento descrito está en una situación real, 
+con aire ambiente en sus dos caras, se define la resistencia
+térmica total $R_t$ es la suma de la resistencia
+térmica del elemento conductivo más las
+resistencias térmicas superficiales: es la inversa
+de la transmitancia $U$, o 
+coeficiente de transmisión de calor 
+de un elemento $k$. De esto se deduce que
+
+\begin{equation}
+    R_t = 1/U = R_{s_e}+ R_{s_i} + R
+\end{equation}
+
+O si el elemento tiene varias capas, usando
+la ecuación~\ref{eq:resistencia-total}, obtenemos
+
+\begin{equation}
+    \label{eq:resistencia:total}
+    R_t = \frac{1}{U} = R_{s_e} + R_{s_i} + R_1 + R_2 + \cdots + R_n
+\end{equation}
+
+\subsection{Tiempo de igualación}
+Considere un cuerpo de forma
+arbitraria y masa $m$, volumen $V$, 
+área superficial $A_s$, densidad $rho$ y calor
+específico $C_p$, inicialmente a una temperatura $T_i$
+. En el instante $t=0$, el cuerpo está colocado en un medio a La
+temperatura $T_\infty$ y se lleva a efecto 
+transferecia de calor entre ese cuerpo y su medio
+ambiente, con un coeficiente de transferencia de calor
+$h$. En beneficio de la discusión, se supondrá que $T_\infty > T_i$,
+pero el análisis es igualmente válido para el caso opuesto.
+Se supondrá que el análisis de sistemas concentrados es
+aplicable, de modo que la temperatura permanece uniforme dentro del
+cuerpo en todo momento y sólo cambia con el tiempo, $T = T(t)$.
+
+Durante un intervalo diferencial de tiempo, $dt$, la temperatura
+del cuerpo es elevada de una cantidad diferencial $DT$. Un
+balance de energía del sólido para el intervalo de tiempo $dt$
+se puede expresar como
+
+\begin{equation}
+    hA_s(T_\infty -T)dt = mC_p dT
+\end{equation}
+
+Como $m = \rho V$ y $dT - d(T - T_\infty)$,
+puesto que $T_\infty$ es constante, remplazando
+en la ecuación anterior
+
+\begin{equation*}
+    \frac{d(T-T_\infty)}{T - R_\infty}
+        = -\frac{hA_s}{\rho V c_p} dt
+\end{equation*}
+
+Integrando desde $T = 0$, en el cual $T = T_i$, hasta
+cualquier instante de $t$, en el cual $T = T(t)$, nos da
+
+\begin{equation}
+    \label{eq:enfrimaiento:tiempo}
+    \ln\left(\frac{T(t) - T_\infty}{T_i - T_\infty}\right)
+     = - \frac{hA_s}{\rho V c_p}t
+\end{equation}
+
+Si dejamos en función de $t$ tenemos
+\begin{equation}
+    \label{eq:enfriamiento:e}
+    \ln\left(\frac{T(t) - T_\infty}{T_i - T_\infty}\right)
+        = e^{-bt}
+\end{equation}
+donde
+\begin{equation}
+    b = \frac{hA_s}{\rho V c_p} (1/s)
+\end{equation}
+
+Esta ecuación nos permitirá calcular lo siguiente
+
+\begin{enumerate}
+    \item La ecuación~\ref{eq:enfriamiento:e} permite
+    calcular la temperatura $T(t)$ de un cuerpo en el
+    instante $t = 0$, de modo alternativo, el tiempo $t$
+    requerido para alcanzar el específico $T(t)$.
+    \item La temperatura de un cuerpo se aproxima a la del medio ambiente, $T_\infty$, en
+    forma exponencial. Al principio, la temperatura del cuerpo cambia con rapidez pero, posteriormente, lo hace más bien con lentitud. Un valor grande de b indica que el cuerpo tenderá a alcanzar la temperatura del medio
+    ambiente en un tiempo corto. Entre mayor sea el valor del exponente $b$,
+    mayor será la velocidad de decaimiento de la temperatura. Note que $b$ es
+    proporcional al área superficial, pero inversamente proporcional a la masa y al calor específico del cuerpo. Esto no es sorprendente, ya que tarda
+    más tiempo en calentarse o enfriarse una masa grande, en especial cuando tiene un calor específico grande
+\end{enumerate}
+
+Podemos remplazar $T(t)$ en la ecuación~\ref{eq:enfriamiento-newton}, 
+con lo que nos queda
+
+\begin{equation}
+    \label{eq:enf:t}
+    q(t) = hA[T(t) - T_\infty]
+\end{equation}
+
+Por lo que la cantidad total de la transferencia
+de calor entre el cuerpo y el medio circundante
+durante el intervalo $t = 0$ hasta $t$ es simplemente
+el cambio en el contenido de energía de ese cuerpo.
+Así la ecuación será
+
+$Q = mc_p[T(t) - T_i]$
+
+La cantidad de transferencia de calor llega a su límite superior
+cuando el cuerpo alcanza la temperatura $T_\infty$ del medio
+circundante. Por lo tanto, la transferencia de calor máxima
+entre el cuerpo y sus alrededores es:
+
+$Q = mc_p(T_\infty - T_i)$

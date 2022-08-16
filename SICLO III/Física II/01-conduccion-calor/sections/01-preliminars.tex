@@ -1,0 +1,185 @@
+\subsection{Cantidad de calor}
+Si introducimos una cuchara fría en una taza
+con agua caliente, la cuchara tenderá a  calentarse
+y el agua tenderá a enfriarse, hasta encontrar
+una temperatura de equilibrio, si generalizamos esto,
+ya que pasa en la naturaleza constantemente, por lo que nace
+la necesidad para poder estudiar este  fenómeno matemáticamente 
+la necesidad de medir esto, la cual llamaremos
+cantidad de calor $Q$ o simplemente calor. Para esto primero se define
+la unidad de medida del calor la cual es la caloría.
+una caloría se define como \textit{la cantidad de calor
+que se necesita para elevar 1 g de agua de 14.5 a 15.5 °C}, 
+como para subir la temperatura necesitamos energía en forma 
+de calor, entonces la caloría también es calor, por lo que
+de los datos experimentales se tiene
+
+\begin{align*}
+    1\unit{cal} = 4.186 \text{ J}\\
+    1 \unit{kcal} = 4186 \text{ J}
+\end{align*}
+
+\subsection{Calor y Calor especifico}
+La cantidad de calor $Q$ que se necesita para elevar una masa $m$
+de una temperatura $T_0$ a $T_1$ depende directamente de la masa
+pues de las observaciones experimentales lo an demostrado, 
+así también como del tipo de material y la variación de la temperatura
+por lo que se tiene que
+
+\begin{equation}
+    \label{eq:calor}
+    Q = mc\Delta T, \text{ siendo } \Delta T = T_1 - T_0
+\end{equation}
+
+Para un cambio infinitesimal de temperatura $dT$ y calor
+correspondiente $dT$ se obtiene la ecuación siguiente
+
+\begin{equation}
+    \Rightarrow dQ = mc\Delta T
+\end{equation}
+
+Así el $C$ llamado el calor especifico es
+\begin{equation}
+    c = \frac{1}{m}\frac{dQ}{dT}
+\end{equation}
+
+De esto se deduce que el calor especifico del
+agua es
+\begin{align*}
+    c = 1 \unit{cal/g°C} \text{ o }    c = 4186 \unit{J/kg°C}
+\end{align*}
+
+\subsection{Capacidad calorífica molar}
+Primero definamos un mol, \textit{Un mol es la cantidad
+de sustancia que contiene tantas entidades elementales (átomos, moléculas, iones, electrones, etc)
+como átomos hay en 0.012 kg de carbono 12}. También necesitamos
+el número de Avogadro $N_A$ que es el siguiente
+
+\begin{equation*}
+    N_A = 6.02214179\times 10^{23} \unit{moléculas/mol}
+\end{equation*}
+
+Con esto definimos la maso molar $M$ de un compuesto,
+esta es la masa de un mol, está será la masa $m_m$ de Una sola molécula
+multiplicada por su número másico
+
+\begin{equation}
+    M = N_A m_m
+\end{equation}
+
+Así la masa $m$ estará dada por $m = M n$, donde $n$
+es el número de moles, remplazando en la ecuación~\ref{eq:calor}
+obtenemos
+
+\begin{equation}
+    Q = nMc\Delta T
+\end{equation}
+
+Al número $C = Mc$ se le llama la capacidad calorífica molar,
+Asi el calor es
+
+\begin{equation}
+    \label{eq:calor-molar}
+    Q = nC\Delta T
+\end{equation}
+
+Por lo que para una variación infinitesimal de 
+temperatura $dT$ es
+
+\begin{equation*}
+    dQ = nCdT
+\end{equation*}
+
+Así la capacidad calorífica molar queda
+\begin{equation}
+    \label{eq:calor-especifico-molar}
+    C = \frac{1}{n}\frac{dQ}{dT} = Mc
+\end{equation}
+
+\subsection{Mecanismos de transferencia de calor}
+Hay diferentes formas como el calor se transfiere
+entre dos puntos, ademas de que este depende del medio 
+por el cual se transfiere, dependiendo 
+del material, estos pueden
+ser \textbf{aislantes:} \textit{Los que no transfieren
+calor} \textbf{conductores: } \textit{Los que si transfieren
+el calor}. Se a clasificado de la siguiente manera
+
+
+\subsubsection{Conducción}\label{subsub:coduction}
+Es la que se da por un medio a traves de los materiales conductores, de 
+las observaciones experimentales se a obtenido lo 
+siguiente, la transferencia de calor $dQ$ a traves de una
+barilla conductora en un tiempo determinado $dt$ es directamente proporcional a la longitud $L$ y sección transversal
+$A$ de la varilla, multiplicado por $\Delta T = T_B - T_A$, donde
+$T_A$ y $T_B$ son las temperaturas de los extremos de la barilla,
+ademas que esta depende de la conductividad térmica $k$ del 
+material, i.e.
+
+\begin{equation}
+    \label{eq:conduccion}
+    H = \frac{dQ}{dt} = kAL\frac{T_A - T_B}{L}
+\end{equation}
+
+si la temperatura varia
+de manera no uniforme a traves 
+de la varilla podemos
+asignar la coordenada $x$ así introduciendo
+la gradiente de $dT/dx$ temperatura se tiene:
+
+\begin{equation}
+    \label{eq:conduccion-x}
+    H = \frac{dQ}{dt} = \frac{-kA}{L}\frac{dT}{dx}
+\end{equation}
+
+Ademas podemos asignar $R = L/(kA)$, siendo $R$ la resistividad
+térmica, con lo que la ecuación quedará
+
+\begin{equation}
+    \label{eq:conduccion-r}
+    H = \frac{dQ}{dt} = -\frac{1}{R}\frac{dT}{dx}
+\end{equation}
+
+\subsubsection{Convección}
+La convección es transferencia de calor por movimiento de una masa de fluido de una
+región del espacio a otra.
+
+La transferencia de calor por convección es un proceso muy complejo, y no puede
+describirse con una ecuación sencilla. Veamos algunos hechos experimentales:
+
+\begin{enumerate}
+    \item  La corriente de calor causada por convección es directamente proporcional al
+    área superficial. Esto explica las áreas superficiales grandes de los radiadores y
+    las aletas de enfriamiento.
+
+    \item La viscosidad de los fluidos frena la convección natural cerca de una superficie
+    estacionaria, formando una película superficial que, en una superficie vertical,
+    suele tener el mismo valor aislante que tiene 1.3 cm de madera terciada (valor
+    R = 0.7). La convección forzada reduce el espesor de esta película, aumentando
+    la tasa de transferencia de calor. Esto explica el “factor de congelación”: nos
+    enfriamos más rápidamente en un viento frío que en aire tranquilo a la misma
+    temperatura.
+
+    \item a corriente de calor causada por convección es aproximadamente proporcional 5/4 
+    nal a la potencia de la diferencia de temperatura entre la superficie y el cuerpo
+    principal del fluido.
+
+    De estas observaciones se puede en un principio 
+    deducir la ley de enfriamiento de Newton
+
+    \begin{equation}
+        \label{eq:enfriamiento-newton}
+        q = hA(T_w - T_\infty)
+    \end{equation}
+
+    donde $q$ es la rapidez de transferencia del calor,
+    que esta relacionado directamente proporcional a $h$ llamado
+    el coeficiente de transferencia por convección y $A$ el área
+    de la superficie de contacto entre el fluido y la superficiales,
+    ademas $T_w$ es la temperatura de la superficie y $T_\infty$,
+    la temperatura suficientemente lejos de la superficie.
+\end{enumerate}
+
+\subsubsection{Radiación}
+a corriente de calor causada por convección es aproximadamente proporcional a la potencia de la diferencia de temperatura entre la superficie y el cuerpo
+principal del fluido.

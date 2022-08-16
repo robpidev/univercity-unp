@@ -1,0 +1,19 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'build/main.blg'
+[168] biber-MSWIN64:340> INFO - === 
+[213] Biber.pm:418> INFO - Reading 'build/main.bcf'
+[346] Biber.pm:978> INFO - Found 3 citekeys in bib section 0
+[370] Biber.pm:4401> INFO - Processing section 0
+[385] Biber.pm:4592> INFO - Looking for bibtex file 'ref.bib' for section 0
+[434] bibtex.pm:1713> INFO - LaTeX decoding ...
+[444] bibtex.pm:1518> INFO - Found BibTeX data source 'ref.bib'
+[535] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[535] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[535] Biber.pm:4221> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[564] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[564] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[564] Biber.pm:4221> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[579] bbl.pm:654> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[585] bbl.pm:757> INFO - Output to build/main.bbl
+[585] Biber.pm:130> WARN - Entry 'agus:2011' (ref.bib): Invalid format '9-08-2022' of date field 'urldate' - ignoring
+[586] Biber.pm:132> INFO - WARNINGS: 1
