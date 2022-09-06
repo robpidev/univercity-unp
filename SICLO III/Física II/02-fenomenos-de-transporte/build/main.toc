@@ -1,0 +1,18 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Preliminares}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Masa molar}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Fenómenos de transporte}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Ley de Newton de la viscosidad}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Ley de Poiseuille}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Ley de Fourier}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Convección}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Radiación}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}transferencia de masa}{10}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Difusión}{11}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Fundamentemos de la difusión Molecular}{11}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Difusión Molecular}{12}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}sistema para el estudio de la difusión molecular}{12}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Ley de Fick}{12}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.6}Difusión molecular en Estado estacionario}{13}{subsubsection.2.6.6}%
+\contentsline {subsubsection}{\numberline {2.6.7}Difusividad}{14}{subsubsection.2.6.7}%
+\contentsline {section}{\numberline {3}Referencias}{14}{section.3}%
