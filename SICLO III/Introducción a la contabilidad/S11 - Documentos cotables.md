@@ -1,6 +1,5 @@
 # Documentos contables
 
-
 y por lo tanto puede ser un papel
 que contiene información de un bien o
 servicio y también los datos del sujeto o personas intervin ientes. Hecho realizado, fecha , etc, el cual
