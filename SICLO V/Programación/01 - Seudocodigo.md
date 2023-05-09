@@ -141,9 +141,11 @@ SALIDA: Volumen de un cono.
 ENTRADA: ```radio``` del cono y la ```altura``` del cono.  
 PROCESO: $\pi*r^2*h/3$
 
-Algoritmo
+Algoritmo: se utilizará ```^``` en ves de ```$\uparrow$
 
-```
+```python
 variables REALES: radio, altura, volumen
 LEER: radio, altura
+volumen <- 3.14159 * r^2 * h / 3
+ESCRIBIR: "El volumen del cono es: ", volumen
 ````
