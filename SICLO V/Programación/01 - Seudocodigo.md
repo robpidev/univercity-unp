@@ -139,7 +139,7 @@ SOLUCIÓN
 
 SALIDA: Volumen de un cono.  
 ENTRADA: ```radio``` del cono y la ```altura``` del cono.  
-PROCESO: $\pi*r^2*h/3$
+PROCESO: $\pi r^2 h/3$
 
 Algoritmo: se utilizará ```^``` en ves de ```$\uparrow$
 
