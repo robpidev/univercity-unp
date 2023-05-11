@@ -119,15 +119,15 @@ Se tiene las siguientes faces
 
 ### 1. Análisis del problema
 
-(a) Salida o resultado.  
-(b) Entrada o datos.  
-(c) Proceso.
+1. Salida o resultado.
+2.  Entrada o datos.
+3. Proceso.
 
 ### 2. Diseño del algoritmo
 
-3. Codificación y depuración
-4. Compliación y ejecución.
-5. Documentación y mantenimiento.
+4. Codificación y depuración
+5. Compliación y ejecución.
+6. Documentación y mantenimiento.
 
 ## Problemas
 
@@ -263,4 +263,51 @@ LEER: lado
 area_sombreada <- L^2 - 3.14159 * (2^(1/2) * l/2)^2/2
 
 ESCRIBIR: "El area sombreada es: ", area_sombreada
+```
+
+## MatLab y seudo-código
+
+(Laboratorio matricial)
+
+### 1. Seudo códio a matlab
+
+Conversion
+|instrucción|seudo código| matlab |  
+|---|---|--|
+|Declaraación de variables | ```variables TIPO: [lista de variables]```| declaración automática de variables|
+|asignación de variables | ```var <- [valor]```| ```var = [valor];```|
+|instrucción de entrada |```LEER: var```| ```var = input('[mensaje]');```|
+|instrucción de salida | ```ESCRIBIR: [lista de salida]```| ```disp([variables, '[texto]', expreción aritmetica]);```|
+|operadores aritmeticos| $\uparrow$, ```*```, ```/```, ```+```, ```-```|```^```, ```*```, ```/```, ```+```,```-```|
+|operadores de comparación| >, $\geq$, <, $\leq$, =, $\neq$ | >, >=, <=, ==, ~=|
+|Operadores lógicos| $\sim$, $\wedge$, $\vee$ | ~, &&, \|\| |
+|Función parte entera|ENTERO(x/y)| fix(x/y) |
+|función módulo|MODULO(x, y)|rem(x, y)|
+
+### Ejemplo
+
+Escribir un algorimo para obtener el número de saludos de $n$ personas
+que asisten a una reunión considerando que se saludan todos y solo una
+vez.
+
+Algoritmo
+
+```python
+varaibles ENTERAS: n, num_saludos 
+LEER: n
+
+num_saludos <- n * (n - 1)/2
+
+ESCRIBIR: "El número de saludos es: ", num_saludos
+```
+
+En MatLab
+
+```MatLab
+n = input('Ingrese el número de personas')
+num_saludos = n * (n - 1)/2
+
+disp("El número de saludos es: ")
+
+disp(num_saludos)
 ```
