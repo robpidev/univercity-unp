@@ -36,8 +36,9 @@ Def. Secuencia de pasos no ambiguos que se deben seguir a partir de unos datos p
 5. ```LN(x)```: Devuelve $\ln(x)$.
 6. ```SIN(x)```: devuelve $\sin(x)$.
 7. ```COS(x)```: Devuelve $\cos(x)$.
+8. ```ABS(x)```: Devuelve $|x|$.
 
-## Costruyendo un algoritmo
+## Construyendo un algoritmo
 
 ### 1. Declaración de variables
 
