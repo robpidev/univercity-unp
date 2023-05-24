@@ -308,3 +308,14 @@ si el año es múltiplo de 100 solo será bisiesto si es
 múltiplo de 400. Hacer un algoritmo para que dado un año
 determine si es bisiesto.
 
+SOLUCIÓN
+
+## 5. Estructura en Matlab
+
+```MatLab
+if [condition]
+    [instructions];
+else
+    [instructions];
+end
+```
