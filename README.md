@@ -1,9 +1,8 @@
-# univercity-unp
----
+# university-unp
 
-Este repositorio contine
+Este repositorio contiene
 
-* Sílabo de todos los cursos
+* Sílabus de todos los cursos
 * Trabajos
 * Exámenes
 
