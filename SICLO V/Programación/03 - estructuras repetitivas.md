@@ -144,3 +144,155 @@ MIENTRAS contador <= n HACER
 FIN_MIENTRAS
     
 ```
+
+### Ejercicio 1.6
+
+El país $A$ tiene una población $x$ y una tasa de
+crecimiento anual constante del 5%, el país $B$
+tiene una población y y una tasa del 3%, ademas se sabe que
+$y>x$.. Escribir un algoritmo para determinar,
+después de cuántos años la población del país $A$ superará
+a la del país $B$
+
+Análisis  
+SALIDA: El número de años en que la población de $A$ supera
+a la de $B$.  
+ENTRADA: las poblaciones $x$ e $y$.  
+PROCESOS: ---
+
+Algoritmo
+
+```javascript
+variables REALES: x, y, tiempo
+LEER: x, y
+tiempo <- 0
+
+MIENTRAS y >= x HACER
+    y <- y * (1 + 5/100)
+    x <- x * (1 + 5/100)
+    tiempo = tiempo + 1
+FIN_MIENTRAS
+
+ESCRIBIR: "Los años necesarios son: ", tiempo
+```
+
+### Ejercicio 1.7
+
+Escribir un algoritmo para calcular el cociente entre dos números
+por el método de restas sucesivas.
+
+Ejem: 26/6 = 4
+
+1. 26 - 6 = 20
+2. 20 - 6 = 14
+3. 14 - 6 = 8
+4. 8 - 6 = 2
+
+Cociente entero 4
+
+Análisis  
+SALIDA: Cociente entero.  
+ENTRADA: dividendo y divisor.  
+PROCESO: método de restas sucesivas
+
+Algoritmo
+
+```javascript
+variables ENTERAS: dividendo, divisor, cociente
+LEER: dividendo, divisor
+
+cociente <-  0
+
+MIENTRAS dividendo >= divisor HACER
+    dividendo <- dividendo - divisor
+    cociente <- cociente + 1
+FIN_MIENTRAS
+
+ESCRIBIR: "El cociente entero es: ", cociente
+```
+
+### Ejercicio 1.8
+
+Escribir un algoritmo para calcular el producto de dos números
+por el método de sumas sucesivas.  
+Ejem:
+$$5\times4 = 5 + 5 + 5 + 5 = 20$$
+
+Análisis
+SALIDA: El producto de los dos números.  
+ENTRADA: Variables enteras.  
+PROCESO: sumas sucesivas.
+
+Algoritmo
+
+```javascript
+variables ENTERAS: producto, multiplicando, multiplicador, contador
+LEER: multiplicando, multiplicador
+contador <- 1
+producto <- 0
+
+MIENTRAS contador <= multiplicador HACER
+    producto <- producto + multiplicando
+    contador <- contador + 1
+FIN_MIENTRAS
+
+ESCRIBIR: "El producto es: ", producto
+```
+
+### Ejercicio 1.9
+
+Hacer un algoritmo para calcular la potencia de un número
+elevado a un exponente por el método de multiplicaciones
+sucesivas.
+
+Ejem:
+$$3^4 = 3\times 3\times3\times3 = 81$$
+
+Análisis  
+SALIDA: La potencia.  
+ENTRADA: Base y exponente.  
+PROCESO: multiplicaciones sucesivas.
+
+Algoritmo
+
+```javascript
+variables ENTERAS: base, exponente, potencia, base
+LEER: base, potencia
+
+potencia <- 1
+contador <- 1
+
+MIENTRAS contador <= exponente HACER
+    potencia <- potencia * base
+    contador <- contador + 1
+FIN_MIENTRAS
+
+ESCRIBIR: "La potencia es: ", potencia
+```
+
+### Ejercicio 1.10
+
+Escribir un algoritmo para hallar el factorial de un número,
+sabiendo que $n! = 1\times2\times3\times\cdots\times n$
+
+Análisis  
+SALIDA: el factorial del número.  
+ENTRADA: el número n.  
+PROCESO: multiplicar los números desde 1 hasta n.
+
+Algoritmo
+
+```javascript
+variables ENTERAS: n, fact, contador
+LEER: n
+
+fact <- 1
+contador <- 2
+
+MIENTRAS contador <= n HACER
+    fact <- fact * contador
+    contador <- contador + 1
+FIN_MIENTRAS
+
+ESCRIBIR: n, "! = ", fact
+```
