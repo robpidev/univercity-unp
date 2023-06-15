@@ -296,3 +296,350 @@ FIN_MIENTRAS
 
 ESCRIBIR: n, "! = ", fact
 ```
+
+## 2. Estructuras repetitivas anidadas
+
+### Ejercicios 2
+
+#### Ejercicio 2.2
+
+Escribir un algoritmo para imprimir la siguiente salida
+
+1  
+2 2  
+3 3 3  
+4 4 4 4  
+...  
+n n n n ... n
+
+ANÁLISIS
+SALIDA: el número 1 una vez, ...  
+ENTRADA: el número n  
+PROCESO: ...
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, veces, número
+LEER: n
+
+número <- 1
+MIENTRAS número <= n HACER
+    veces <- 1
+    MIENTRAS veces <= número HACER
+        ESCRIBIR: número
+        veces <- veces + 1
+    FIN_MIENTRAS
+    número <- número + 1
+FIN_MIENTRAS
+```
+
+#### Ejercicio 2.3
+
+Escribir un algoritmo para obtener el número n, n veces
+el número (n - 1), (n - 1) veces..., el número 1, 1 vez.
+
+ANÁLISIS:
+SALIDA: El número n, n veces ...  
+ENTRADA: el número n
+PROCESO: ...
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, veces
+LEER: n
+
+MIENTRAS n >= 1 HACER
+    veces <- n
+    MIENTRAS veces >= 1
+        ESCRIBIR: n
+        veces <- veces - 1
+    FIN_MIENTRAS
+    n <- n - 1
+FIN_MIENTRAS
+```
+
+#### Ejercicio 2.4
+
+Escribir un algoritmo para obtener el número n, una vez; el número n - 1, 2 vece; el número n-2, tres veces y así sucesivamente hasta el número.
+
+ANÁLISIS:
+SALIDA: El número n, 1 veces ..
+ENTRADA: el número n
+PROCESO: ...
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, veces, contador
+LEER: n
+número <- n
+
+MIENTRAS número >= 1 HACER
+    veces <- 1
+    MIENTRAS veces <= n - número + 1 HACER
+        ESCRIBIR: número
+        veces = veces + 1
+    FIN_MIENTRAS
+    número = número - 1
+FIN_MIENTRAS
+
+```
+
+#### Ejercicio 2.5
+
+Escribir un algoritmo para escribir un cuadrado
+con asteriscos cuyo lado será n asteriscos.
+
+ANÁLISIS:
+SALIDA: El cuadrado con asteriscos  
+ENTRADA el número n  
+PROCESO: ...  
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: veces, n, lineas
+LEER: n
+lineas <- n
+
+MIENTRAS lineas <= n HACER
+    veces <- 1
+    MIENTRAS veces <= n HACER
+        escribir: "*"
+        veces <- veces + 1
+    FIN_MIENTRAS
+    ESCRIBIR: salto de linea
+    lineas <- lineas + 1
+FIN_MIENTRAS
+```
+
+#### Ejercicio 2.6
+
+Escriba un algoritmo para imprimir triángulo de n asteriscos
+de altura y de base como en la figura (para n = 4)
+
+```javascript
+*
+* *
+* * *
+* * * *
+```
+
+ANÁLISIS
+
+SALIDA: triángulo  
+ENTRADA: n  
+PROCESO:---  
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, veces, linea
+LEER: n
+linea <- n
+
+MIENTRAS linea <= n HACER
+    veces <- 1
+    
+    MIENTRAS veces <= linea
+        ESCRIBIR: "*"
+        veces = veces + 1
+    FIN_MIENTRAS
+    ESCRIBIR: salto de linea
+    linea = linea + 1
+FIN_MIENTRAS
+    
+```
+
+#### Ejercicio 2.7
+
+Escriba un algoritmo para imprimir triángulo de n asteriscos
+de altura y de base como en la figura (para n = 4)
+
+```javascript
+      *
+    * *
+  * * *
+* * * *
+```
+
+ANÁLISIS
+
+SALIDA: triángulo  
+ENTRADA: n  
+PROCESO:---  
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, fila, columna
+LEER: n
+linea <- linea + 1
+
+MIENTRAS linea <= n HACER
+    MIENTRAS columna <= n HACER
+        SI linea + columna > n HACER
+            ESCRIBIR: "*"
+        SINO
+            ESCRIBIR: " "
+        FIN_SI
+    FIN_MIENTRAS
+    ESCRIBIR: salto de linea
+    linea = linea + 1
+    columna = columna + 1
+FIN_MIENTRAS
+    
+```
+
+#### Ejercicios 2.8
+
+Un número, es número primo cuando solo tiene dos divisores;
+así mismo y la unidad. EScribir un algoritmo para calcular
+la cantidad de divisores de un número y de acuerdo a eso indicar
+si es número primo o no
+
+ANÁLISIS  
+SALIDA: si es primo o no.  
+ENTRADA: el número n.  
+PROCESOS: ir comprobando número por número hasta n
+para ver si es primo o no
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: num, cantidad_divisores, divisor
+LEER: num
+divisor <- 1
+cantidad_divisores = 0
+
+MIENTRAS divisor <= n HACER
+    SI MÓDULO(n/divisor) = 0 ENTONCES
+        cantidad_divisores = cantidad_divisores + 1
+    FIN_SI
+    divisor = divisor + 1
+FIN_MIENTRAS
+
+SI cantidad_divisores > 2 ENTONCES
+    ESCRIBIR: "No es primo"
+SINO
+    ESCRIBIR: "Es primo"
+FIN_SI
+```
+
+#### Ejercicio 2.9
+
+Escribir un algoritmo para obtener los n primeros números
+primos.
+
+ANÁLISIS
+SALIDA: los n primeros números primos  
+ENTRADA: n  
+PROCESOS: ir comprobando si n es primo o no
+como el algoritmo anterior  
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, divisor, cantidad_primos, numero
+variables LÓGICAS: es_primo
+LEER: n
+cantidad_primos <- 0
+numero <- 2
+
+MIENTRAS cantidad_primos <= n HACER
+    divisor <- 2
+    es_primo <- verdadero
+    MIENTRAS divisor < numero && es_primo HACER
+        SI MODULO(numero/divisor) = 0 ENTONCES
+            es_primo <- falso
+        FIN_SI
+        divisor <- divisor + 1
+    FIN_MIENTRAS
+
+    SI es_primo ENTONCES
+        ESCRIBIR: numero, ", "
+        cantidad_primos <- cantidad_primos + 1
+    FIN_SI
+    numero = numero + 1
+FIN_MIENTRAS
+```
+
+#### Ejercicio 2.10
+
+Un numero entero es centro numérico cuando divide a un grupo de números
+naturales que empiecen el 1, en 2 subgrupos cuyas sumas de
+elementos es igual. Ejemplo, el número 6 divide al grupo
+de números del 1 al 8 en dos subgrupos; el primero del 1 al 5
+cuya suma de elementos es 15 (1 + 2 + 3 + 4 + 5 = 15) y
+el segundo del 7 al 8 cuya suma es 15(7 + 8 = 15);
+por lo tanto 6 es centro numérico.
+
+ANÁLISIS
+SALIDA: Si el número es centro numérico o no  
+ENTRADA: el número n  
+PROCESO: sumar todos los números a la izquierda de n
+ir sumando uno a uno desde n + 1 hasta que sea igual
+o mayor que la suma de la izquierda, si la suma es igual
+es centro si no, no es centro numérico.
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, suma_izquierda, suma_derecha
+LEER: n
+
+suma_izquierda <- 1/2 * (n - 1) * (n)
+suma_derecha = 0
+
+MIENTRAS suma_derecha < suma_izquierda HACER
+    n = n + 1
+    suma_derecha = suma_derecha + n
+FIN_MIENTRAS
+
+SI suma_derecha = suma_izquierda ENTONCES
+    ESCRIBIR: "Si es centro numérico"
+SI_NO
+    ESCRIBIR: "No es centro numérico"
+FIN_SI
+```
+
+## 3. Formato en Matlab
+
+### 3.1 Instrucción ```fprintf```
+
+Se utiliza para imprimir variables con formato
+
+```javascript
+    frpinft('[formatos, texto y salto de linea]', [variables])
+```
+
+donde:  
+textos(s): se imprime en la pantalla en forma idéntica  
+formato(s): se usa para las variables y tiene los siguientes elementos
+
+$$\%\left\{\begin{matrix}
+    + \\
+    - \\
+    0 \\
+\end{matrix}\right\} n.m
+\left\{\begin{matrix}
+    i \\
+    f \\
+    e \\
+    g \\
+\end{matrix}\right\}
+$$
+
+|Símbolo|sirve para|
+|---|---|
+|%|Indicador de formato|
+|+|Imprime el signo|
+|-|alineación a la izquierda|
+|0|rellena de ceros a la izquierda|
+n|número total de columnas
+f|formato real
+e|formato  exponencial
+g|el formato mas corto entre real y exponencial
+\n|Salto de linea

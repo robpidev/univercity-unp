@@ -2,7 +2,7 @@
 
 Este repositorio contiene
 
-* Sílabus de todos los cursos
+* Silabus de todos los cursos
 * Trabajos
 * Exámenes
 
