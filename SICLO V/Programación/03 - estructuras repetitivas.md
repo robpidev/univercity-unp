@@ -595,10 +595,11 @@ suma_derecha = 0
 
 MIENTRAS suma_derecha < suma_izquierda HACER
     n = n + 1
-    suma_derecha = suma_derecha + n
+    suma_derecha <- suma_derecha + n
 FIN_MIENTRAS
 
-SI suma_derecha = suma_izquierda ENTONCES
+suma_derecha <- 0
+SI suma_derecha <- suma_izquierda ENTONCES
     ESCRIBIR: "Si es centro numérico"
 SI_NO
     ESCRIBIR: "No es centro numérico"
