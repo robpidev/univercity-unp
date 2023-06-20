@@ -590,7 +590,7 @@ ALGORITMO
 variables ENTERAS: n, suma_izquierda, suma_derecha
 LEER: n
 
-suma_izquierda <- 1/2 * (n - 1) * (n)
+suma_izquierda <- 1/2 * (n - 1) * n
 suma_derecha = 0
 
 MIENTRAS suma_derecha < suma_izquierda HACER
@@ -598,7 +598,6 @@ MIENTRAS suma_derecha < suma_izquierda HACER
     suma_derecha <- suma_derecha + n
 FIN_MIENTRAS
 
-suma_derecha <- 0
 SI suma_derecha <- suma_izquierda ENTONCES
     ESCRIBIR: "Si es centro numérico"
 SI_NO
@@ -606,9 +605,129 @@ SI_NO
 FIN_SI
 ```
 
-## 3. Formato en Matlab
+## 3. Estructuras en Matlab
 
-### 3.1 Instrucción ```fprintf```
+```Matlab
+while [proposiciones]
+    [instrucciones]
+end
+```
+
+### Ejercicios 3
+
+#### Ejercicio 3.1 (es el mismo que 2.10)
+
+```Matlab
+n = input("Ingrese n: ");
+
+sum_izquierda = 1/2 * (n - 1) * n;
+sum_derecha = 0;
+
+while sum_derecha < sum_izquierda
+    n = n + 1;
+    sum_derecha = sum_derecha + n;
+end
+
+if sum_derecha == sum_izquierda
+    disp("Es centro numérico")
+else
+    disp("No es centro numérico")
+end
+```
+
+#### Ejercicio 3.2
+
+Escribir un algoritmos y su programa para obtener los n primeros centros
+numéricos
+
+ANÁLISIS  
+SALIDA: los n primeros centro numéricos  
+ENTRADA: la cantidad n de centros numéricos  
+PROCESO: ---
+
+ALGORITMO
+
+```javascript
+variables ENTERAS: n, sum_izq, sum_der, cantidad, natural, natural_suma
+LEER n:
+cantidad <- 0
+natural <- 1
+
+MIENTRAS cantidad < n HACER
+    sum_izq <- 1/2 * natural * (natural - 1)
+    sum_der <- 0
+    natural_sum <- natural
+    
+    MIENTRAS sum_der < sum_izq HACER
+        natural_sum <- natural_sum + 1
+        sum_der <- sum_der + natural_sum
+    FIN_MIENTRAS
+    
+    SI sum_der = sum_izq ENTONCES
+        ESCRIBIR: natural, ", "
+        cantidad <- cantidad + 1
+    SINO
+    natural <- natural + 1
+FIN_MIENTRAS
+
+```
+
+MATLAB
+
+```Matlab
+n = input('ingrese la cantidad: ');
+
+cantidad = 0;
+natural = 1;
+
+while cantidad < n
+    sum_izq = 1/2 * natural * (natural - 1);
+    sum_der = 0;
+    natural_sum = natural;
+
+    while sum_der < sum_izq
+        natural_sum = natural_sum + 1;
+        sum_der = sum_der + natural_sum;
+    end
+
+    if sum_der == sum_izq
+        fprintf("%i, ", natural);
+        cantidad = cantidad + 1;
+    end
+    natural = natural + 1;
+end
+```
+
+#### Ejercicio 3.3
+
+Escriba un algoritmo y su programa para pedir un
+número e invertirlo: Ejemplo si dan 8769
+saldrá 9678.
+
+ANÁLISIS
+ENTRADA: El número n
+SALIDA: El número n invertido
+PROCESO: ---
+
+Algoritmo
+
+```javascript
+variables ENTERAS: numero, invertido
+LEER: numero
+
+invertido <- 0
+
+MIENTRAS numero = 0 HACER
+    invertido <- invertido * 10 + MODULO(numero/10)
+    numero <- ENTERO(NUMERO/10)
+FIN_MIENTRAS
+
+ESCRIBIR: numero
+```
+
+## 4. Formato en Matlab
+
+### 4.1 Instrucción ```fprintf```
 
 Se utiliza para imprimir variables con formato
 
