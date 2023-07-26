@@ -145,4 +145,3 @@ PARA i DESDE 1 HASTA N HACER
     ESCRIBIR: "nums[", i, "] = ", nums[i]
 FIN_PARA
 ```
-

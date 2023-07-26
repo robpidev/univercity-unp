@@ -78,3 +78,69 @@ MIENTRAS cantidad <= n HACER
     FIN_SI
 FIN_PARA
 ```
+
+## 4.2 Ejercicios Matlab
+
+### Ejercicio 4.2.1
+
+Escribir un programa para obtener las tablas de
+resta del que tiene como diferencia
+de 1 al 12 menores que N.
+
+PROGRAMA
+
+```MATLAB
+N = input("Ingrese el número de tablas: ");
+
+for tabla=1:N
+    fprintf("\nTabla %0i\n____________\n", tabla);
+
+    for sustraendo=1:12
+        fprintf("\r%2i - %2i = %2i\n", sustraendo + tabla, tabla, sustraendo);
+    end
+end
+```
+
+### Ejercicio 4.2.2
+
+Imprimir un triángulo para un número N dado.
+
+Para N = 4 se tendrá
+
+\*  
+\* *  
+\* * *  
+\* * * *  
+\* * *  
+\* *  
+\* 
+
+PROGRAMA
+
+```matlab
+N = 20;
+for i=1:N
+    for j=1:i-1
+        fprintf("*")
+        if i + j > N
+            break;
+        end
+    end
+    fprintf("\n")
+end
+```
+
+### Ejercicio 4.2.3
+
+Hacer un programa para calcular las cifras de pi con en la siguiente
+serie
+
+$$
+\pi = 3 + \frac{3}{2 \cdot 3 \cdot 4} + \frac{4}{4 \cdot 5 \cdot 6}
++ \frac{4}{6 \cdot 7 \cdot 8} + \cdots
+$$
+
+PROGRAMA
+```Matlab
+
+```
