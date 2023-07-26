@@ -145,3 +145,92 @@ PARA i DESDE 1 HASTA N HACER
     ESCRIBIR: "nums[", i, "] = ", nums[i]
 FIN_PARA
 ```
+
+## 5.2 Algoritmos de ordenamiento
+
+### 5.2.1 De forma ascendente (Descendente es similar)
+
+ANÁLISIS
+
+1. En un arreglo de longitud $n$ se busca el mayor valor.
+2. El mayor valor se coloca en la posición $n$ del arreglo
+y el valor n se coloca en la posición i.
+3. Se repite (1) y (2) para $n - 1$ hasta la posición inicial.
+
+ALGORITMO
+
+```javascript
+variables REALES: nums[1]...nums[N], N, mayor, i, pos_mayor, n
+
+LEER: N
+
+PARA i DESDE 1 HASTA N HACER
+    LEER: a[i]
+FIN_PARA
+
+n <- N
+
+MIENTRAS N > 1 HACER
+    mayor <- nums[1]
+    pos_mayor <- 1
+    PARA i DESDE 2 HASTA N HACER
+        SI mayor < nums[i] ENTONCES
+            mayor <- nums[i]
+            pos_mayor <- i
+        FIN_SI
+    FIN_PARA
+    nums[pos_mayor] <- nums[N]
+    nums[N] <- mayor
+    N <- N - 1
+FIN_MIENTRAS
+
+// Mostrando el resultado
+PARA i DESDE 1 HASTA n HACER
+    ESCRIBIR: "nums[", i, "] = ", nums[i], ", "
+FIN_PARA
+```
+
+### 5.2.2 Burbuja simple
+
+Para ordenar un vector de $N$ elementos
+en forma ascendente (descendente).
+
+ANÁLISIS
+
+1. Se compara el primer elemento con el segundo, si
+el primero es mayor (menor) se intercambia.
+
+2. Se intercambia el segundo con el tercero, si el
+segundo es mayor (menor), se intercambia y así sucesivamente hasta completar el vector. Con esto se logra poner
+el mayor (menor) elemento en la posición N.
+
+3. Se repiten los pasos anteriores para los $N - 1, ... N-2, ... 1$ elementos.
+
+ALGORITMO
+
+```Javascript
+variables REALES: nums[1]...nums[N], N, aux, i, pos, j, n
+
+LEER: N
+
+PARA i DESDE 1 HASTA N HACER
+    LEER: a[i]
+FIN_PARA
+
+n <- N
+
+MIENTRAS N > 1 HACER
+    PARA i DESDE 1 HASTA n - 1 HACER
+        SI nums[i] < nums[i + 1] ENTONCES
+            aux <- nums[i]
+            nums[i] <- nums[i + 1]
+            nums[i + 1] <- aux
+        FIN_SI
+    FIN_PARA
+FIN_MIENTRAS
+
+// Mostrando el resultado
+PARA i DESDE 1 HASTA n HACER
+    ESCRIBIR: "nums[", i, "] = ", nums[i], ", "
+FIN_PARA    
+```
